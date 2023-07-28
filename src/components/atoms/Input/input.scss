@@ -1,0 +1,42 @@
+@import "../../../scss/variables.scss";
+
+.input {
+   display: flex;
+   flex-direction: column;
+   gap: 0.25rem;
+   font-family: "Sofia Pro";
+   font-style: normal;
+   &__content {
+      box-sizing: border-box;
+      border-radius: 0.5rem;
+      border: 1px solid $gris05;
+      width: 100%;
+      padding: 0.625rem 1rem 0.5rem;
+
+      &--reg-14 {
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 20px;
+      }
+   }
+   &__content::placeholder {
+      color: $gris03;
+   }
+   &__content:focus:active:active-visible {
+      border: 1px solid $gris05;
+   }
+   &__content:focus-visible {
+      border: 1px solid $gris05;
+      outline-offset: 0.5px;
+      outline: 1px solid transparent;
+   }
+   &__alert {
+      margin-left: 1rem;
+   }
+   &--disabled {
+      color: $gris03;
+   }
+   &--active {
+      color: $gris05;
+   }
+}

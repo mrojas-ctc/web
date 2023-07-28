@@ -1,0 +1,20 @@
+@import "../../../scss/variables.scss";
+
+.carousel{
+    &__container{
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    &__item{
+        min-width: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+}

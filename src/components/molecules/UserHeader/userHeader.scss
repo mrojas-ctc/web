@@ -1,0 +1,204 @@
+@import "../../../scss/variables.scss";
+
+.user-header {
+   position: relative;
+   border-radius: 0.5rem;
+   padding: 0.5rem 0.65rem 0.45rem;
+   box-sizing: border-box;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 0.6875rem;
+   cursor: pointer;
+   &--open {
+      width: auto;
+      min-width: 100%;
+   }
+   &--close {
+      width: 2.875rem;
+   }
+   &--active {
+      border: none;
+      .user-header__img-container{
+         border: 4px solid #F7F6FD;
+      }
+   }
+   &--inactive {
+      border: none;
+   }
+   &:hover .user-dropdown__name {
+      color: $primary;
+   }
+   &:hover .user-dropdown__button {
+      background: $gris02;
+   }
+   &__name {
+      font-family: "sofia pro";
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      margin: 0;
+      &--active {
+         color: $primary;
+      }
+      &--inactive {
+         color: $gris05;
+      }
+   }
+   &__img-container {
+      border: 4px solid #fff;
+      border-radius: 50%;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover{
+         border: 4px solid #F7F6FD;
+      }
+   }
+   &__img {
+      width: 2rem;
+      height: 2rem;
+   }
+   &__button {
+      position: relative;
+      width: 0.625rem 1.25rem;
+      display: flex;
+      padding: 0.25rem;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      &--active {
+         background: $gris02;
+      }
+      &--inactive {
+         background: transparent;
+      }
+   }
+   &__modal-container {
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      position: fixed;
+      background: transparent;
+      z-index: 90;
+   }
+   &__modal {
+      position: absolute;
+      width: 11.8125rem;
+      min-height: 11.0625rem;
+      box-shadow: $shadowLarge;
+      padding: 0.5rem 0;
+      background: $white;
+      margin: 0;
+      border-radius: 0.5rem;
+      box-sizing: border-box;
+      &--open {
+         top: 155px;
+         right: 32px;
+         z-index: 99999999;
+      }
+      &--close {
+         bottom: 33px;
+         left: 87px;
+         z-index: 99;
+      }
+   }
+   &__modal-item {
+      font-family: "sofia pro";
+      list-style: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      color: $gris04;
+      padding: 0.5rem 0.625rem 0.25rem 0.625rem;
+      text-decoration: none;
+      &:hover {
+         color: $primary;
+         background: $hoverPrimary;
+      }
+      &--disabled {
+         color: $gris02;
+         cursor: not-allowed;
+         &:hover {
+            color: $gris02;
+            background: $white;
+         }
+      }
+   }
+   &__modal-link-item {
+      font-family: "sofia pro";
+      list-style: none;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 400;
+      color: $gris04;
+      padding: 0.5rem 0.625rem 0.25rem 0.625rem;
+      text-decoration: none;
+      display: block;
+      &:hover {
+         color: $primary;
+         background: $hoverPrimary;
+      }
+      &--disabled {
+         color: $gris02;
+         cursor: not-allowed;
+         &:hover {
+            color: $gris02;
+            background: $white;
+         }
+      }
+   }
+   &__modal-item-name {
+      font-family: "sofia pro";
+      list-style: none;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      color: $gris04;
+      padding: 0.5rem 0.625rem 0 0.625rem;
+   }
+   &__modal-item-username {
+      font-family: "sofia pro";
+      list-style: none;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+      color: $gris03;
+      padding: 0 0.625rem 1rem 0.625rem;
+      border-bottom: 1px solid $gris02;
+      &--split {
+         text-overflow: ellipsis;
+         overflow: hidden;
+         white-space: nowrap;
+      }
+   }
+   &__pointer {
+      cursor: pointer;
+   }
+   &__link {
+      text-decoration: none;
+      color: $gris04;
+      &:hover {
+         color: $primary;
+         background: $hoverPrimary;
+      }
+   }
+}
+
+@media only screen and (max-width: 1919px) {
+   .user-header {
+      &__modal {
+         &--open {
+            top: 125px;
+            right: 32px;
+         }
+         &--close {
+            left: 60px;
+            bottom: 18px;
+         }
+      }
+   }
+}

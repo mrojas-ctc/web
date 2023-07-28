@@ -1,0 +1,65 @@
+@import "../../../scss/variables.scss";
+
+.button {
+    font-family: "Sofia Pro";
+    font-style: normal;
+    border-radius: 0.375rem;
+    font-weight: bold;
+    justify-content: center;
+    border: 2px solid black;
+    cursor: pointer;
+    &__filled {
+        background-color: black;
+        color:white;
+        &:hover{
+            border: 2px solid $color1;
+            background-color: $color1;
+            color: $white;
+        }
+    }
+    &__outline {
+        background-color: transparent;
+        color: black;
+        &:hover{
+            border: 2px solid $primary;
+            background-color: $primary;
+            color: white;
+        }
+    }
+    &__icon {
+        &--lg{
+            width: 320px;
+            padding: 10px 30px;
+        }
+        &--md{
+            width: 240px;
+            padding: 10px 30px;
+        }
+        &--sm{
+            width: 160px;
+            padding: 10px 30px;
+        }
+        &--xs{
+            width: 80px;
+            padding: 10px 20px;
+        }
+    }
+    &__no-icon {
+        &--lg{
+            width: 320px;
+            padding: 10px 30px;
+        }
+        &--md{
+            width: 240px;
+            padding: 10px 30px;
+        }
+        &--sm{
+            width: 160px;
+            padding: 10px 30px;
+        }
+        &--xs{
+            width: 80px;
+            padding: 10px 20px;
+        }
+    }
+}
